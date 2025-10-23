@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Forum App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌟 Forum Login</h1>
+
+      <div id="message"></div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="your@email.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="toggle-form">
+          Belum punya akun? <a href="#" id="showRegister">Daftar disini</a>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="form hidden">
+        <div class="form-group">
+          <label for="registerEmail">Email</label>
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="your@email.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Minimal 6 karakter"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="registerName">Nama</label>
+          <input
+            type="text"
+            id="registerName"
+            placeholder="Nama lengkap"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Daftar</button>
+        <div class="toggle-form">
+          Sudah punya akun? <a href="#" id="showLogin">Login disini</a>
+        </div>
+      </form>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Post & Share</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="forum.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🌟 Forum Diskusi</h1>
+            <div class="user-info">
+                <span id="userName">Loading...</span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Panel: Create Post -->
+        <div class="left-panel">
+            <h2 class="panel-title">✍️ Tulis Postingan</h2>
+            <textarea id="postContent" placeholder="Tulis sesuatu..."></textarea>
+            <button class="post-btn" onclick="createPost()">Upload Postingan</button>
+        </div>
+
+        <!-- Right Panel: View Posts -->
+        <div class="right-panel">
+            <h2 class="panel-title">📝 Postingan</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="showAllPosts()">Semua Postingan</button>
+                <button class="filter-btn" onclick="showMyPosts()">Postingan Saya</button>
+            </div>
+            <div class="posts-container" id="postsContainer">
+                <div class="empty-state">Loading postingan...</div>
+            </div>
+        </div>
+    </div>
+
+<script src="forum.js"></script>
+</body>
+</html>
